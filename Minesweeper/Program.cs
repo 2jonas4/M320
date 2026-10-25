@@ -6,101 +6,109 @@ namespace Minesweeper
     internal class Program
     {
         static void Main(string[] args)
-
         {
-
             int rowCount = 5;
             int colCount = 5;
-            bool[,] minefield = new bool[rowCount, colCount];
+            Cell[,] minefield = new Cell[rowCount, colCount];
+
+            for (int i = 0; i < minefield.GetLength(0); i++)
+            {
+                for (int k = 0; k < minefield.GetLength(1); k++)
+                {
+                    minefield[i, k] = new Cell();
+                }
+            }
 
             while (true)
             {
+                Console.Clear();
                 PrintBoard(minefield);
 
-                Console.WriteLine("Bitte Feld eingeben:  ");
+                Console.WriteLine("Bitte Feld eingeben: ");
                 var field = Console.ReadLine();
 
-                if (field == "q")
+                if (string.Equals(field, "q", StringComparison.OrdinalIgnoreCase))
                 {
-                    break; // now valid because we're inside the while loop
+                    break;
                 }
-                UncoveredField(minefield, field);
+
+                RevealedField(minefield, field);
             }
         }
 
-
-        static void PrintBoard(bool[,] board)
-
+        static void PrintBoard(Cell[,] board)
         {
-
-            Console.Write(" ");
-
+            Console.Write("  ");
             for (int i = 0; i < board.GetLength(1); i++)
-
             {
-
-                Console.Write($"{i + 1}");
-
+                Console.Write($"{i + 1} ");
             }
-
             Console.WriteLine();
 
-
-
             for (int i = 0; i < board.GetLength(0); i++)
-
             {
-
-                Console.Write($"{(char)(65 + i)}");
-
+                Console.Write($"{(char)(65 + i)} ");
                 for (int k = 0; k < board.GetLength(1); k++)
-
                 {
-
-                    if (!board[i, k])
-
+                    if (!board[i, k].IsRevealed)
                     {
-
                         Console.Write("x ");
-
                     }
-
                     else
                     {
-
-                        Console.Write(" ");
-
+                        Console.Write("  ");
                     }
-
                 }
-
                 Console.WriteLine();
+            }
+        }
 
+        static void RevealedField(Cell[,] board, string field)
+        {
+            // C2
+            if (string.IsNullOrWhiteSpace(field) || field.Length < 2)
+            {
+                Console.WriteLine("Ungültige Eingabe. Beispiel: A1");
+                return;
             }
 
+            // Row: first character
+            char rowChar = char.ToUpper(field[0]);
+            if (rowChar < 'A' || rowChar > 'Z')
+            {
+                Console.WriteLine("Ungültige Zeile. Verwende Buchstaben A-Z.");
+                return;
+            }
+
+            int row = rowChar - 'A';
+
+            // Column: remaining characters
+            var colPart = field.Substring(1);
+            if (!int.TryParse(colPart, out int colNumber))
+            {
+                Console.WriteLine("Ungültige Spalte. Verwende eine Zahl, z.B. 1.");
+                return;
+            }
+
+            int col = colNumber - 1;
+
+            // Bounds checks
+            if (row < 0 || row >= board.GetLength(0) || col < 0 || col >= board.GetLength(1))
+            {
+                Console.WriteLine("Feld außerhalb des Spielfelds.");
+                return;
+            }
+
+            // Safe to reveal
+            board[row, col].IsRevealed = true;
         }
-
-
-        static void UncoveredField(bool[,] board, string field)
-
-        {
-
-            var rowChar = field.Substring(0, 1);
-            var row = (int)char.Parse(rowChar);
-
-            row -= 65;
-
-
-            var colChar = field.Substring(1);
-
-            var col = int.Parse(colChar);
-
-
-
-            board[row, col] = true;
-
-        }
-
     }
 
+    public class Cell
+    {
+        public bool IsRevealed { get; set; }
+
+        public bool HasMine {  get; set; }
+        public bool IsFlagged { get; set; }
+    }
 }

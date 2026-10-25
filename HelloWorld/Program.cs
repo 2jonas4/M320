@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+﻿using System;
 
 namespace HelloWorld
 {
@@ -6,23 +6,23 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            //var res = AddingNewEventArgs(5, 7);
-
             var a = 5;
             PrintNumber(a);
 
-            Console.WriteLine(res); ($"Main: {$"Main: {res}" {a});
+            int res = Add(5, 7);
+            Console.WriteLine($"Main: {res}, a={a}");
+
+            PrintMessage("hello");
         }
-}
+
         static void PrintMessage(string s)
         {
             s = s + "abc";
             Console.WriteLine($"Message: {s}");
         }
 
-        static void Main(string[] args)
-
-        static int Add(int a, int b) {
+        static int Add(int a, int b)
+        {
             int c = a + b;
             return c;
         }
@@ -30,7 +30,6 @@ namespace HelloWorld
         static void PrintNumber(int a)
         {
             Console.WriteLine($"Zahl: {a}");
-
         }
     }
 }

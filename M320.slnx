@@ -1,5 +1,14 @@
 <Solution>
-  <Project Path="Minesweeper/Minesweeper.csproj" />
-  <Project Path="Übungsaufgaben/Aufgabe1/MyMath.csproj" />
+  <Project Path="Hausaufgaben/Hausaufgaben.csproj" Id="3a1adbcc-bf6b-4b56-8c0f-32dcccb50ecc" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
+  <Project Path="Lidl/Lidl.csproj" Id="07071b4f-424c-48f9-b4c1-dc2284f25930" />
+  <Project Path="Minesweeper/Minesweeper.csproj" />
+  <Project Path="Müdigkeit/Müdigkeit.csproj" Id="fbf1cfdc-0d6f-4905-a8da-de1896f1885b" />
+  <Project Path="Program.cs/ClassDemo.csproj" Id="50c1d684-85b4-4db8-93eb-d2f83f189908" />
+  <Project Path="RepArray/RepArray.csproj" Id="7389facf-9cad-41cd-b37e-b2c3b1248764" />
+  <Project Path="uebung_fussballmannschafft/uebung_fussballmannschaft.csproj" Id="53e10695-405f-496a-a165-5c129811ffe9" />
+  <Project Path="Vererbung3_Hund/Vererbung3_Hund.csproj" Id="221441aa-bc92-4418-8de9-85e14bf21b6f" />
+  <Project Path="Vererbung4_Hund/Vererbung4_Hund.csproj" Id="f45962b8-45a9-48a3-9ad3-8bcc35673917" />
+  <Project Path="Vererbung5_Warenwirtschaft/Vererbung5_Warenwirtschaft.csproj" Id="58c3dc40-4f20-4120-b8b4-b19fd98389ca" />
+  <Project Path="Übungsaufgaben/Aufgabe1/MyMath.csproj" />
 </Solution>
