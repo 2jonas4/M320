@@ -1,8 +1,11 @@
 <Solution>
+  <Project Path="../AlarmWorkshop/AlarmWorkshop/AlarmWorkshop.csproj" />
   <Project Path="Hausaufgaben/Hausaufgaben.csproj" Id="3a1adbcc-bf6b-4b56-8c0f-32dcccb50ecc" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
   <Project Path="Lidl/Lidl.csproj" Id="07071b4f-424c-48f9-b4c1-dc2284f25930" />
   <Project Path="Minesweeper/Minesweeper.csproj" />
+  <Project Path="MyCalculator.Tests/MyCalculator.Tests.csproj" Id="8d1e9afe-d406-4dad-8fe2-e8ab6c9d59c1" />
+  <Project Path="MyCalculator/MyCalculator.csproj" Id="dd2e7c9d-a7f8-449b-b898-bc292eae6181" />
   <Project Path="Müdigkeit/Müdigkeit.csproj" Id="fbf1cfdc-0d6f-4905-a8da-de1896f1885b" />
   <Project Path="Program.cs/ClassDemo.csproj" Id="50c1d684-85b4-4db8-93eb-d2f83f189908" />
   <Project Path="RepArray/RepArray.csproj" Id="7389facf-9cad-41cd-b37e-b2c3b1248764" />
