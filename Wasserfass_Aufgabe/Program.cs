@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Wasserfass_Aufgabe
 {
     internal class Program
@@ -8,40 +9,40 @@ namespace Wasserfass_Aufgabe
         {
             Wasserfass fass = new Wasserfass(100);
 
-            Fehlercode code = fass.Befüllen(50);
-
-            if (code == Fehlercode.Erfolg)
+            try
             {
+                fass.Befüllen(50);
                 Console.WriteLine("Befüllen erfolgreich");
-            }
-            else if (code == Fehlercode.NegativeMenge)
-            {
-                Console.WriteLine("Fehler: Negative Menge");
-            }
-            else if (code == Fehlercode.Ueberlauf)
-            {
-                Console.WriteLine("Fehler: Fass würde überlaufen");
-            }
+                Console.WriteLine("Füllstand: " + fass.Füllstand);
 
-            Console.WriteLine("Füllstand: " + fass.Füllstand);
-
-            code = fass.Befüllen(60);
-
-            if (code == Fehlercode.Ueberlauf)
+                // Löst WasserfassOverflowException aus
+                fass.Befüllen(60);
+            }
+            catch (WasserfassOverflowException ex)
             {
-                Console.WriteLine("Fehler: Fass würde überlaufen");
+                Console.WriteLine("Fehler: " + ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine("Ungültige Eingabe: " + ex.Message);
             }
 
-            code = fass.Entnehmen(200);
-
-            if (code == Fehlercode.ZuWenigWasser)
+            try
             {
-                Console.WriteLine("Fehler: Zu wenig Wasser vorhanden");
+                // Löst WasserfassUnderflowException aus
+                fass.Entnehmen(200);
+            }
+            catch (WasserfassUnderflowException ex)
+            {
+                Console.WriteLine("Fehler: " + ex.Message);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine("Ungültige Eingabe: " + ex.Message);
             }
 
             Console.WriteLine("Füllstand am Ende: " + fass.Füllstand);
-
-            Console.ReadKey(); 
+            Console.ReadKey();
         }
     }
 }
