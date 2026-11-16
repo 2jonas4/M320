@@ -1,5 +1,7 @@
 <Solution>
   <Project Path="../AlarmWorkshop/AlarmWorkshop/AlarmWorkshop.csproj" />
+  <Project Path="AlarmWorkshop.Test/AlarmWorkshop.Test.csproj" Id="3e3e3081-41c2-4370-8f78-0e7e0ff8dcf5" />
+  <Project Path="ExceptionHandling/ExceptionHandling.csproj" Id="d955f7cc-5a2f-431a-9844-4e4d5568e81f" />
   <Project Path="Hausaufgaben/Hausaufgaben.csproj" Id="3a1adbcc-bf6b-4b56-8c0f-32dcccb50ecc" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
   <Project Path="Lidl/Lidl.csproj" Id="07071b4f-424c-48f9-b4c1-dc2284f25930" />
@@ -13,5 +15,7 @@
   <Project Path="Vererbung3_Hund/Vererbung3_Hund.csproj" Id="221441aa-bc92-4418-8de9-85e14bf21b6f" />
   <Project Path="Vererbung4_Hund/Vererbung4_Hund.csproj" Id="f45962b8-45a9-48a3-9ad3-8bcc35673917" />
   <Project Path="Vererbung5_Warenwirtschaft/Vererbung5_Warenwirtschaft.csproj" Id="58c3dc40-4f20-4120-b8b4-b19fd98389ca" />
+  <Project Path="Wasserfass.Test/Wasserfass.Test.csproj" Id="fee44dda-0742-49a8-8aaa-e3f389eb5cc5" />
+  <Project Path="Wasserfass_Aufgabe/Wasserfass_Aufgabe.csproj" Id="fb707a75-b103-497a-b248-f5f6414092b2" />
   <Project Path="Übungsaufgaben/Aufgabe1/MyMath.csproj" />
 </Solution>
