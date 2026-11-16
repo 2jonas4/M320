@@ -41,7 +41,7 @@ namespace Wasserfass_Aufgabe
 
             Console.WriteLine("Füllstand am Ende: " + fass.Füllstand);
 
-            Console.ReadKey();
+            Console.ReadKey(); 
         }
     }
 }

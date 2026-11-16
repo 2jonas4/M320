@@ -4,6 +4,8 @@ using System.Text;
 
 
 
+using System;
+
 namespace Wasserfass_Aufgabe
 {
     public class Wasserfass
@@ -13,50 +15,52 @@ namespace Wasserfass_Aufgabe
         public int Füllstand { get; private set; }
         public int Kapazität { get; }
 
-        public Wasserfass(int kapazität)
+        public Wasserfass(int kapazitaet)
         {
-            Kapazität = kapazität;
+            if (kapazitaet <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(kapazitaet), "Die Kapazität muss grösser als 0 sein.");
+            }
+
+            Kapazität = kapazitaet;
             MinimalPegel = 0;
-            MaximalPegel = kapazität;
+            MaximalPegel = kapazitaet;
             Füllstand = 0;
         }
 
-        public Fehlercode Befüllen(int menge)
+        public void Befüllen(int menge)
         {
             if (menge < 0)
             {
-                return Fehlercode.NegativeMenge;
+                throw new ArgumentOutOfRangeException(nameof(menge), "Die Menge darf nicht negativ sein.");
             }
 
             if (Füllstand + menge > MaximalPegel)
             {
-                return Fehlercode.Ueberlauf;
+                throw new WasserfassOverflowException();
             }
 
             Füllstand += menge;
-            return Fehlercode.Erfolg;
         }
 
-        public Fehlercode Entnehmen(int menge)
+        public void Entnehmen(int menge)
         {
             if (menge < 0)
             {
-                return Fehlercode.NegativeMenge;
+                throw new ArgumentOutOfRangeException(nameof(menge), "Die Menge darf nicht negativ sein.");
             }
 
             if (Füllstand - menge < MinimalPegel)
             {
-                return Fehlercode.ZuWenigWasser;
+                throw new WasserfassUnderflowException();
             }
 
             Füllstand -= menge;
-            return Fehlercode.Erfolg;
         }
 
-        public Fehlercode Entleeren()
+        public void Entleeren()
         {
             Füllstand = 0;
-            return Fehlercode.Erfolg;
         }
     }
 }
