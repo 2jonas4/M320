@@ -1,6 +1,5 @@
 <Solution>
   <Project Path="../AlarmWorkshop/AlarmWorkshop/AlarmWorkshop.csproj" />
-  <Project Path="../M320_GeekJokes/GeekJokes.csproj" />
   <Project Path="AlarmWorkshop.Test/AlarmWorkshop.Test.csproj" Id="3e3e3081-41c2-4370-8f78-0e7e0ff8dcf5" />
   <Project Path="AufgabeStack/AufgabeStack.csproj" Id="358ffa7c-8d1d-4cd0-a285-210898735384" />
   <Project Path="ExceptionHandling/ExceptionHandling.csproj" Id="d955f7cc-5a2f-431a-9844-4e4d5568e81f" />
@@ -8,6 +7,7 @@
   <Project Path="Hausaufgaben/Hausaufgaben.csproj" Id="3a1adbcc-bf6b-4b56-8c0f-32dcccb50ecc" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
   <Project Path="Lidl/Lidl.csproj" Id="07071b4f-424c-48f9-b4c1-dc2284f25930" />
+  <Project Path="M320_GeekJokes-master/M320_GeekJokes/GeekJokes.csproj" />
   <Project Path="Minesweeper/Minesweeper.csproj" />
   <Project Path="MyCalculator.Tests/MyCalculator.Tests.csproj" Id="8d1e9afe-d406-4dad-8fe2-e8ab6c9d59c1" />
   <Project Path="MyCalculator/MyCalculator.csproj" Id="dd2e7c9d-a7f8-449b-b898-bc292eae6181" />

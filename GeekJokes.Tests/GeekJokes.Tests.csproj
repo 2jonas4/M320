@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\..\Downloads\M320_GeekJokes-master\M320_GeekJokes-master\M320_GeekJokes\GeekJokes.csproj" />
-    <ProjectReference Include="..\..\M320_GeekJokes\GeekJokes.csproj" />
+    <ProjectReference Include="..\M320_GeekJokes-master\M320_GeekJokes\GeekJokes.csproj" />
   </ItemGroup>
 
   <ItemGroup>
