@@ -3,6 +3,7 @@
   <Project Path="AlarmWorkshop.Test/AlarmWorkshop.Test.csproj" Id="3e3e3081-41c2-4370-8f78-0e7e0ff8dcf5" />
   <Project Path="AufgabeStack/AufgabeStack.csproj" Id="358ffa7c-8d1d-4cd0-a285-210898735384" />
   <Project Path="ExceptionHandling/ExceptionHandling.csproj" Id="d955f7cc-5a2f-431a-9844-4e4d5568e81f" />
+  <Project Path="GameLogger/GameLogger/GameLogger.csproj" />
   <Project Path="GeekJokes.Tests/GeekJokes.Tests.csproj" Id="e357d7df-4f19-4633-896e-d5fec7e7a447" />
   <Project Path="Hausaufgaben/Hausaufgaben.csproj" Id="3a1adbcc-bf6b-4b56-8c0f-32dcccb50ecc" />
   <Project Path="HelloWorld/HelloWorld.csproj" />
